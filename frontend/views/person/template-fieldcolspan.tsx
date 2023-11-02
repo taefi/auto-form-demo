@@ -22,7 +22,9 @@ export default function TemplateFieldColspan() {
                     }}
          />`.trimStart()
                     }
+                    label='What you write:'
           />
+          <h4>What you get:</h4>
           <AutoForm service={PersonService} model={PersonModel}
                     customLayoutRenderer={{
                        template: [

@@ -18,7 +18,10 @@ export default function TemplateStringVisibleField() {
                                         ],
                                   }}
                 />`}
+                        label='What you write:'
+                        style={{fontFamily: 'courier'}}
                 readonly/>
+            <h4>What you get:</h4>
             <AutoForm service={PersonService} model={PersonModel}
                       customLayoutRenderer={{
                           template: [

@@ -21,7 +21,10 @@ export default function TemplateString() {
                                   }}
                         />`.trimStart()
                     }
+                    label='What you write:'
+                    style={{fontFamily: 'courier'}}
           />
+          <h4>What you get:</h4>
           <AutoForm service={PersonService} model={PersonModel}
                                    customLayoutRenderer={{
                                      template: [

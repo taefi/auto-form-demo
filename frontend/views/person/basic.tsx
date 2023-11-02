@@ -8,7 +8,10 @@ export default function Basic() {
         <TextArea key={'template'}
                   readonly
                   value={"<AutoForm service={PersonService} model={PersonModel} />"}
+                  label='What you write:'
+                  style={{fontFamily: 'courier'}}
         />
+        <h4>What you get:</h4>
         <AutoForm service={PersonService} model={PersonModel} />
       </section>
   );

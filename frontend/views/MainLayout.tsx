@@ -4,7 +4,6 @@ import Placeholder from 'Frontend/components/placeholder/Placeholder.js';
 import { useRouteMetadata } from 'Frontend/util/routing.js';
 import { Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import CustomRenderer from "Frontend/views/person/custom-renderer";
 
 const navLinkClasses = ({ isActive }: any) => {
   return `block rounded-m p-s ${isActive ? 'bg-primary-10 text-primary' : 'text-body'}`;
@@ -38,6 +37,9 @@ export default function MainLayout() {
             </NavLink>
             <NavLink className={navLinkClasses} to="/custom-field">
               Overriding Fields
+            </NavLink>
+            <NavLink className={navLinkClasses} to="/crud-basic">
+              Crud
             </NavLink>
 
           </nav>
