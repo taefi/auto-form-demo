@@ -9,13 +9,13 @@ export default function OverridingField() {
                   readonly
                   value={`<AutoForm service={PersonService} model={PersonModel} 
                         customFields={{
-                            description: ({ field }) => <TextArea {...field} label='Description' />
+                            description: ({ field }) => <TextArea key={field.name} {...field} label='Description' />
                         }}
 />`}
         />
         <AutoForm service={PersonService} model={PersonModel}
                   customFields={{
-                      description: ({ field }) => <TextArea {...field} label='Description' />
+                      description: ({ field }) => <TextArea key={field.name} {...field} label='Description' />
                   }}/>
       </section>
   );
