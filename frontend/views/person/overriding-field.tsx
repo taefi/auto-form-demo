@@ -8,17 +8,21 @@ export default function OverridingField() {
         <TextArea key={'template'}
                   readonly
                   value={`<AutoForm service={PersonService} model={PersonModel} 
-                        customFields={{
-                            description: ({ field }) => <TextArea key={field.name} {...field} label='Description' />
-                        }}
+                        fieldOptions={{
+                          description: {
+                              renderer: ({field}) => <TextArea key={field.name} {...field} label='Description'/>
+                          }
+                      }}
 />`}
                   label='What you write:'
                   style={{fontFamily: 'courier'}}
         />
           <h4>What you get:</h4>
         <AutoForm service={PersonService} model={PersonModel}
-                  customFields={{
-                      description: ({ field }) => <TextArea key={field.name} {...field} label='Description' />
+                  fieldOptions={{
+                      description: {
+                          renderer: ({field}) => <TextArea key={field.name} {...field} label='Description'/>
+                      }
                   }}/>
       </section>
   );
